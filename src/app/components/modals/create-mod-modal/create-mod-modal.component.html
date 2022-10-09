@@ -1,0 +1,39 @@
+<app-modal-base>
+    <div class="row">
+        <div class="col-md-12">
+          <label for="TextoNuevaNotaTitulo">Título</label>
+          <textarea type="text" class="form-control modal-content modal-content-title" 
+          aria-label="With title" id="TextoNuevaNotaTitulo" [(ngModel)]="cardTitle">
+            {{cardTitle}}
+          </textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="TextoNuevaNota" class="modal-label">Descripción</label>
+          <textarea class="form-control modal-content modal-content-text modal-input" 
+          aria-label="With textarea" id="TextoNuevaNota" [(ngModel)]="cardText">
+            {{cardText}}
+          </textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="SelectCiudadNuevaNota" class="modal-label">Ubicación</label>
+          <select name="ciudad" id="SelectCiudadNuevaNota">
+            <option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="DatetimeNuevaNota" class="modal-input">Fecha y hora</label>
+          <input type="datetime-local" name="fechahora" id="DatetimeNuevaNota"/>
+        </div>
+      </div>
+      
+      <div class="row">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" 
+        aria-label="Close" id="botonGuardarAgregarNota" value="Guardar" (click)="addCard()">
+          Create Card
+        </button>
+      </div>
+</app-modal-base>

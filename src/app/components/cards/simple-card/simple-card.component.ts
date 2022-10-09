@@ -11,13 +11,9 @@ export class SimpleCardComponent implements OnInit {
   @Input() cardTitle !: string;
   @Input() cardText !: string;
 
-  constructor(private cardService : CardsService) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  deleteThis(){
-    this.cardService.deleteCard(this.cardTitle,this.cardText);
   }
 
 }

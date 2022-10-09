@@ -17,10 +17,9 @@ export class LoginPageComponent implements OnInit {
   }
 
   authentication(){
-    let a = this.userService.checkUser(
+    this.userService.checkUser(
       this.data.logInForm.controls.username.value,
       this.data.logInForm.controls.password.value
     )
-    alert(a)
   }
 }

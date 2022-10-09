@@ -1,18 +1,20 @@
-<div>
+<router-outlet></router-outlet>
+<!--<div>
     <app-navbar-w-dropdown></app-navbar-w-dropdown>
-    <!--<app-login-page></app-login-page> -->
-    <!--<app-navbar-bottom></app-navbar-bottom>-->
+    <app-login-page></app-login-page>
+    <app-navbar-bottom></app-navbar-bottom>
     <div class="mt-5 container">
-    <!--<app-grid-system></app-grid-system>-->
-    <!--
+    <app-grid-system></app-grid-system>
+    
     <input class = "mt-3" #inputTitle>
     <button class="btn btn-primary" (click)="changeTitle(inputTitle.value)">Submit</button>
-    -->
-    <!--<app-button1></app-button1>-->
+    
+    <app-button1></app-button1>
     <app-card-w-api #temp></app-card-w-api>
     <input class="mt-3" type="text" placeholder="latitude" #lat>
     <input class="mt-3"type="text" placeholder="longitude" #long>
     <input class="mt-3" type="datetime-local" #dat>
     <button (click)="tiempo(lat.value,long.value,dat.value)">Tiempo</button>
+    <app-add-button></app-add-button>
     </div>
-</div>
+</div>-->

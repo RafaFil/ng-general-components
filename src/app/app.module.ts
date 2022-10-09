@@ -14,6 +14,10 @@ import { Button1Component } from './components/buttons/button1/button1.component
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { ModalBaseComponent } from './components/modals/modal-base/modal-base.component';
 import { CardWApiComponent } from './components/cards/card-w-api/card-w-api.component';
+import { DeleteModalComponent } from './components/modals/delete-modal/delete-modal.component';
+import { CreateModModalComponent } from './components/modals/create-mod-modal/create-mod-modal.component';
+import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
+import { NotesPageComponent } from './components/notes-page/notes-page.component';
 
 
 @NgModule({
@@ -28,7 +32,11 @@ import { CardWApiComponent } from './components/cards/card-w-api/card-w-api.comp
     Button1Component,
     CarrouselComponent,
     ModalBaseComponent,
-    CardWApiComponent
+    CardWApiComponent,
+    DeleteModalComponent,
+    CreateModModalComponent,
+    AddButtonComponent,
+    NotesPageComponent
   ],
   imports: [
     BrowserModule,
