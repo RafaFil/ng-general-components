@@ -7,6 +7,9 @@ import { Observable, of } from 'rxjs';
 })
 export class CardsService {
 
+  private title : string = "";
+  private text : string = "";
+
   cardsArr : Card[] = [
     {title: "title1", text: "text"},
     {title: "title2",text: "text2"},
@@ -26,12 +29,17 @@ export class CardsService {
     this.cardsArr.push(new Card(t,txt,temp));
   }
 
-  deleteCard(t:string, txt : string) {
+  saveDataCard(t:string, txt : string){
+    this.title = t;
+    this.text = txt;
+  }
+
+  deleteCard() {
+    console.log(this.title,this.text)
     for (let card of this.cardsArr){
-      if (card.title === t) {
-        if(card.text === txt){
+      if (card.title === this.title) {
+        if(card.text === this.text){
           let index = this.cardsArr.indexOf(card)
-          console.log(index)
           this.cardsArr.splice(index,1);
         }
       }

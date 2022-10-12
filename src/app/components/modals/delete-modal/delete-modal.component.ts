@@ -17,7 +17,7 @@ export class DeleteModalComponent implements OnInit {
   }
 
   deleteThis(){
-    this.cardService.deleteCard(this.cardTitle,this.cardText)
+    this.cardService.deleteCard()
   }
 
 }
