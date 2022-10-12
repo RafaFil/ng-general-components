@@ -1,0 +1,5 @@
+<div class="row">
+    <div class="col-4" *ngFor="let card of cardsArr">
+        <app-card-ng-bootstrap [cardTitle]="card.title" [cardText]="card.text" [temperature]="card.temp"></app-card-ng-bootstrap>
+    </div>
+</div>

@@ -10,7 +10,6 @@ import { LoginPageComponent } from './components/login/login-page/login-page.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SimpleCardComponent } from './components/cards/simple-card/simple-card.component';
 import { GridSystemComponent } from './components/grid-system/grid-system.component';
-import { Button1Component } from './components/buttons/button1/button1.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { ModalBaseComponent } from './components/modals/modal-base/modal-base.component';
 import { CardWApiComponent } from './components/cards/card-w-api/card-w-api.component';
@@ -18,6 +17,11 @@ import { DeleteModalComponent } from './components/modals/delete-modal/delete-mo
 import { CreateModModalComponent } from './components/modals/create-mod-modal/create-mod-modal.component';
 import { AddButtonComponent } from './components/buttons/add-button/add-button.component';
 import { NotesPageComponent } from './components/notes-page/notes-page.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CardNgBootstrapComponent } from './components/cards/card-ng-bootstrap/card-ng-bootstrap.component';
+import { GridSystem2Component } from './components/grid-system2/grid-system2.component';
+import { NgBootstrapModalComponent } from './components/modals/ng-modals/ng-bootstrap-modal/ng-bootstrap-modal.component';
+import { DelModalComponent } from './components/modals/ng-modals/del-modal/del-modal.component';
 
 
 @NgModule({
@@ -29,20 +33,24 @@ import { NotesPageComponent } from './components/notes-page/notes-page.component
     LoginPageComponent,
     SimpleCardComponent,
     GridSystemComponent,
-    Button1Component,
     CarrouselComponent,
     ModalBaseComponent,
     CardWApiComponent,
     DeleteModalComponent,
     CreateModModalComponent,
     AddButtonComponent,
-    NotesPageComponent
+    NotesPageComponent,
+    CardNgBootstrapComponent,
+    GridSystem2Component,
+    NgBootstrapModalComponent,
+    DelModalComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

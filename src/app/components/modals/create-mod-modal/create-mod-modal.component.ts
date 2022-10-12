@@ -9,8 +9,9 @@ import { CardsService } from 'src/app/services/cards.service';
 })
 export class CreateModModalComponent implements OnInit {
 
-  @Input() cardTitle : string = "";
-  @Input() cardText : string = "";
+  cardTitle : string = "";
+  cardText : string = "";
+  @Input() temp : string = "";
 
   cities: readonly string[] = [
     'Montevideo',
@@ -32,7 +33,8 @@ export class CreateModModalComponent implements OnInit {
   }
 
   addCard(){
-    this.cardService.addCard(this.cardTitle,this.cardText)
+    console.log(this.cardTitle,this.cardText)
+    this.cardService.addCard(this.cardTitle,this.cardText,this.temp)
   }
   
 

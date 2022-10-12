@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { CardsService } from 'src/app/services/cards.service';
 
 @Component({
   selector: 'app-del-modal',
@@ -8,12 +9,17 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class DelModalComponent implements OnInit {
 
-  constructor(public activeModal : NgbActiveModal) { }
+  @Input() title : string ="";
+  @Input() text : string = "";
+
+
+  constructor(public activeModal : NgbActiveModal,private cardService : CardsService) { }
 
   ngOnInit(): void {
   }
 
   deleteThis(){
-
+    alert("eliminarrr")
+    //this.cardService.deleteCard(this.title,this.text);
   }
 }

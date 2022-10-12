@@ -6,8 +6,8 @@
         Deseas eliminar?
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteThis()">Si</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="activeModal.close('Close click')">No</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteThis()" (click)="activeModal.close('Close click')">Si</button>
     </div>
 </div>
 

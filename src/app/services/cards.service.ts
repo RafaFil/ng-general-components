@@ -21,8 +21,9 @@ export class CardsService {
     return cards
   }
 
-  addCard(t:string, txt : string) : void{
-    this.cardsArr.push(new Card(t,txt));
+  
+  addCard(t:string, txt : string,temp:string) : void{
+    this.cardsArr.push(new Card(t,txt,temp));
   }
 
   deleteCard(t:string, txt : string) {
@@ -30,6 +31,7 @@ export class CardsService {
       if (card.title === t) {
         if(card.text === txt){
           let index = this.cardsArr.indexOf(card)
+          console.log(index)
           this.cardsArr.splice(index,1);
         }
       }
